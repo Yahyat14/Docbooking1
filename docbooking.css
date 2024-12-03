@@ -111,6 +111,7 @@ button {
     width: 100%;
     font-size: 1em;
     transition: background-color 0.3s;
+    justify-content: space-between;
 }
 
 button:hover {
