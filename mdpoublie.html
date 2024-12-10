@@ -3,29 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mot de passe oublie</title>
+    <title>Mot de passe oublié</title>
     <link rel="stylesheet" href="./mdpoublie.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            font-family: Arial, sans-serif;
+        }
+
+        .divmaman1 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div2 {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+            margin: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 0.75rem;
+            margin-top: 1rem;
+            border-radius: 18px;
+            border: none;
+            background-color: #00ff3c9a;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #00b324ce;
+        }
+    </style>
 </head>
 <body>
 
     <div class="divmaman1">
+        <div class="div2">
+            <h1>Bonjour Veuillez remplir </h1> <br/>
 
+            <input type="email" placeholder="Adresse Email" required>
+            <input type="password" placeholder="Mot de passe" required>
+            <input type="password" placeholder="Confirmer votre mot de passe" required>
 
-     <div class="div2" >
-        <h1>Bonjour, Nada</h1> <br/>
-
-        <input type="text" placeholder="adresse Email" required>
-        <input type="text" placeholder="mot de passe" required>
-        <input type="text" placeholder="Confirmer votre mot de passe" required>
-
-<a href="./docbooking.html">
-    <button>Changer votre mot de passe</button>
-
-</a>
-</div>
-
+            <a href="./docbooking.html">
+                <button>Changer votre mot de passe</button>
+            </a>
+        </div>
     </div>
 
-    
 </body>
 </html>
