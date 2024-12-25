@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBooking - Paiement</title>
+    <link rel="stylesheet" href="paeiment.css">
+</head>
+<body>
+    <header>
+        <h1>DocBooking</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="payment">
+            <h2>Page de Paiement</h2>
+            <form id="payment-form">
+                <label for="cardholder-name">Nom du titulaire de la carte</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" required>
+
+                <label for="card-number">Numéro de carte</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Date d'expiration</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Payer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DocBooking. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
