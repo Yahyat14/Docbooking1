@@ -14,6 +14,15 @@ body {
     margin: 0 auto;
 }
 
+.container img {
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between; /* Espacement entre les éléments */
+    
+}
+
+
 /* Header */
 .main-header {
     background-color: #17a796;
