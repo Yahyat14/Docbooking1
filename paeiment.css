@@ -10,19 +10,24 @@ body, h1, h2, p, ul, form, label, input, button {
 body {
     line-height: 1.6;
     background-color: #f9f9f9;
+    background-image: url('chemin-vers-image-arriere-plan');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Styles pour l'en-tête */
 header {
-    background: #24b37c;
+    background: rgba(36, 179, 124, 0.9);
     color: #fff;
     padding: 1em 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin-bottom: 0.5em;
+header .logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 1em;
 }
 
 header nav ul {
@@ -39,11 +44,16 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
 }
 
 /* Section Paiement */
 #payment {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    background: rgba(224, 228, 230, 0.9);
     padding: 50px 20px;
     text-align: center;
     margin-top: 20px;
@@ -61,6 +71,11 @@ header nav ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+#payment-form:hover {
+    transform: scale(1.05);
 }
 
 #payment-form label {
@@ -77,6 +92,11 @@ header nav ul li a {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+#payment-form input:focus {
+    border-color: #24b37c;
 }
 
 #payment-form button {
@@ -88,11 +108,12 @@ header nav ul li a {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #payment-form button:hover {
     background: #45a049;
+    transform: scale(1.05);
 }
 
 /* Styles pour le pied de page */
@@ -114,5 +135,3 @@ footer {
         width: 90%;
     }
 }
-
-
