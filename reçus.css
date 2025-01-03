@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: #e0f7fa; /* Vert clair */
+    background-color: #f1f5f9;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -15,7 +15,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #17a796; /* Nouvelle couleur */
+    background-color: #4CAF50; /* Vert clair */
     padding: 20px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     animation: slideDown 1s ease-in-out;
@@ -30,46 +30,58 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.logo img {
+    width: 100px; /* Augmenté la taille du logo */
 }
 
 .navbar-brand {
-    color: white;
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
 
-.navbar ul {
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    flex-grow: 1;
 }
 
-.navbar li {
-    margin: 0 15px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-.navbar a {
+.nav-links a {
     text-decoration: none;
     color: white;
+    font-weight: 700; /* Mise en gras */
     font-size: 18px;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
 }
 
-.navbar a:hover {
-    color: #e0f7fa; /* Couleur plus claire au survol */
+.nav-links a:hover {
+    color: #ffdd57;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 .form-container {
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: white;
+    padding: 30px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     width: 400px;
     text-align: center;
     border-radius: 8px;
-    margin-top: 20px;
+    margin-top: 40px;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -78,35 +90,38 @@ form {
     flex-direction: column;
 }
 
-label, input, button {
-    margin: 10px 0;
+label {
+    margin: 10px 0 5px;
     font-size: 16px;
-    animation: slideUp 1s ease-in-out;
 }
 
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
 button {
-    background-color: #17a796; /* Nouvelle couleur */
+    background-color: #4CAF50; /* Vert clair */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #145d53; /* Couleur plus foncée pour le hover */
+    background-color: #388E3C; /* Vert plus foncé pour le hover */
 }
 
 .receipt {
     display: none;
-    background-color: #ffffff;
-    padding: 20px;
+    background-color: white;
+    padding: 30px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     width: 400px;
@@ -117,23 +132,21 @@ button:hover {
 }
 
 h1 {
-    margin: 0 0 20px;
     font-size: 26px;
-    color: #145d53; /* Couleur plus foncée */
-    animation: fadeIn 1s ease-in-out;
+    color: #4CAF50; /* Vert clair */
+    margin-bottom: 20px;
 }
 
 .header p {
     margin: 5px 0;
-    color: #17a796; /* Nouvelle couleur */
+    color: #4CAF50; /* Vert clair */
     font-size: 14px;
 }
 
 h2 {
     font-size: 20px;
-    color: #145d53; /* Couleur plus foncée */
+    color: #4CAF50; /* Vert clair */
     margin-bottom: 10px;
-    animation: fadeIn 1s ease-in-out;
 }
 
 table {
@@ -143,26 +156,23 @@ table {
     animation: fadeIn 1s ease-in-out;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
 th, td {
     padding: 10px;
     text-align: left;
+    border: 1px solid #ddd;
 }
 
 th {
-    background-color: #17a796; /* Nouvelle couleur */
+    background-color: #4CAF50; /* Vert clair */
     color: white;
 }
 
 #display-name, #display-service, #display-price, #display-date {
     font-weight: bold;
-    color: #145d53; /* Couleur plus foncée */
-    animation: fadeIn 1s ease-in-out;
+    color: #4CAF50; /* Vert clair */
 }
-.navbar img{
-    width: 15%;
-    
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
