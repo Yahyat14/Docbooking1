@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocBooking</title>
     <link rel="stylesheet" href="reçus.css">
     <script src="reçus.js" defer></script>
@@ -22,19 +22,44 @@
         </nav>
     </header>
 
+    <section id="services" class="services">
+        <h2>Nos Services Médicaux</h2>
+        <div class="service" data-service="Cardiologie" data-price="800">
+            <h3>Cardiologie</h3>
+            <p>Prix de consultation : 800 MAD</p>
+        </div>
+        <div class="service" data-service="Pédiatrie" data-price="600">
+            <h3>Pédiatrie</h3>
+            <p>Prix de consultation : 600 MAD</p>
+        </div>
+        <div class="service" data-service="Dermatologie" data-price="700">
+            <h3>Dermatologie</h3>
+            <p>Prix de consultation : 700 MAD</p>
+        </div>
+        <div class="service" data-service="Radiologie" data-price="900">
+            <h3>Radiologie</h3>
+            <p>Prix de consultation : 900 MAD</p>
+        </div>
+    </section>
+
     <div class="form-container">
         <h2>Entrez vos informations</h2>
         <form id="payment-form">
-            <label for="patient-name">Nom:</label>
+            <label for="patient-name">Nom et Prenom:</label>
             <input type="text" id="patient-name" name="patient-name" required>
             
             <label for="service">Service:</label>
-            <input type="text" id="service" name="service" required>
+            <select id="service" name="service" required>
+                <option value="Cardiologie">Cardiologie</option>
+                <option value="Pédiatrie">Pédiatrie</option>
+                <option value="Dermatologie">Dermatologie</option>
+                <option value="Radiologie">Radiologie</option>
+            </select>
             
-            <label for="price">Prix:</label>
-            <input type="text" id="price" name="price" required>
+            <label for="price">Tarif:</label>
+            <input type="text" id="price" name="price" readonly>
             
-            <label for="date">Date:</label>
+            <label for="date">Date de rendez-vous:</label>
             <input type="date" id="date" name="date" required>
             
             <button type="submit">Générer Reçu</button>
@@ -52,10 +77,10 @@
         <h2>Détails du Paiement</h2>
         <table>
             <tr>
-                <th>Nom</th>
+                <th>Nom et Prenom</th>
                 <th>Service</th>
-                <th>Prix</th>
-                <th>Date</th>
+                <th>Tarif</th>
+                <th>Date de rendez-vous</th>
             </tr>
             <tr>
                 <td id="display-name"></td>
