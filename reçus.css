@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1ba61b; /* Vert clair */
+    background-color: rgba(36, 179, 124, 0.9); /* Vert clair */
     padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
