@@ -1,0 +1,244 @@
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background-color: #17a796;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #cce7ff;
+}
+
+/* Section Hero */
+.hero {
+    background: linear-gradient(135deg, #17a796, #00a9ff);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #17a796;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #005bb5;
+    color: white;
+}
+
+/* Section Services */
+.services {
+    padding: 3rem 0;
+    background-color: #ffffff;
+    border-top: 5px solid #0078d7;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #0078d7;
+}
+
+
+@media screen and (min-width: 769px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
+    .services-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 2rem;
+}}
+
+@media screen and (max-width: 449px) {
+    .services-grid {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+    gap: 2rem;
+}}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    margin-bottom: 1rem;
+    color: #0078d7;
+}
+
+/* Section About */
+.about {
+    padding: 3rem 0;
+    background-color: #eaf4ff;
+    text-align: center;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #0078d7;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Section Contact */
+.contact {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #0078d7;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #17a796;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #0078d7;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}

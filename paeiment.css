@@ -1,0 +1,138 @@
+/* style.css */
+
+/* Réinitialisation des styles par défaut */
+body, h1, h2, p, ul, form, label, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    background-image: url('chemin-vers-image-arriere-plan');
+    background-size: cover;
+    background-attachment: fixed;
+    background: url(./public/images.png);
+}
+
+/* Styles pour l'en-tête */
+header {
+    background: rgba(36, 179, 124, 0.9);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 1em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Section Paiement */
+#payment {
+    background: rgba(224, 228, 230, 0.9);
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#payment h2 {
+    margin-bottom: 20px;
+}
+
+#payment-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+#payment-form:hover {
+    transform: scale(1.05);
+}
+
+#payment-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#payment-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+#payment-form input:focus {
+    border-color: #24b37c;
+}
+
+#payment-form button {
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#payment-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Styles pour le pied de page */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+}
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    #payment-form {
+        width: 90%;
+    }
+}

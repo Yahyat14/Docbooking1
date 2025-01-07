@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBooking - Paiement</title>
+    <link rel="stylesheet" href="paeiment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>DocBooking</h1>
+        <img src="public/imgD2.png" alt="Logo DocBooking" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="payment">
+            <h2>Page de Paiement</h2>
+            <form id="payment-form">
+                <label for="cardholder-name"><i class="fas fa-user"></i> Nom du titulaire de la carte</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" required>
+
+                <label for="card-number"><i class="fas fa-credit-card"></i> Numéro de carte</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date"><i class="fas fa-calendar-alt"></i> Date d'expiration</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA" required>
+
+                <label for="cvv"><i class="fas fa-lock"></i> CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit"><i class="fas fa-check-circle"></i> Payer</button>
+                <a href=""></a>
+            </form>
