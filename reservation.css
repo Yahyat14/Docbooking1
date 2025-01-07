@@ -1,5 +1,9 @@
 /* Styles généraux */
 body {
+    background-image: url(./public/assets/imgREV.JPG);
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -58,10 +62,10 @@ body {
 
 /* Conteneur principal */
 .container {
+    background-color: white;
     max-width: 600px;
     margin: 50px auto;
-    background: #fff;
-    padding: 20px 30px;
+    padding: 20px 30px; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

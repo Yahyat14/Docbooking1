@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('images/doctor.jpg');  /* Chemin de l'image */
+    background-image: url('./public/assets/imageHM.JPG');  /* Chemin de l'image */
     background-size: cover;  /* L'image couvre toute la zone */
     background-position: center;  /* L'image est centrée */
     background-repeat: no-repeat;  /* L'image ne se répète pas */
