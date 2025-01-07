@@ -24,6 +24,8 @@ body {
     text-decoration: none;
 }
 
+
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -62,6 +64,11 @@ body {
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
 }
 
 /* Titre */
