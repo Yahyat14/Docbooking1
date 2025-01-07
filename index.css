@@ -12,23 +12,24 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
 }
 
 .container img {
-    width: 10%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between; /* Espacement entre les éléments */
-    
+    width: 8%;
+    height: 9%;
 }
 
 
 /* Header */
 .main-header {
-    background-color: #17a796;
+    background-color: #45a049;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
 .main-header .logo {
