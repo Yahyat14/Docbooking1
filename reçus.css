@@ -5,7 +5,7 @@ body {
     align-items: center;
     margin: 0;
     background: url('public/assets/medecin-gps.png');
-    background-size: cover;
+    background-size: 100%;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -115,7 +115,7 @@ header {
 }
 
 .services {
-    width: 90%;
+    margin-left: 285px;
     margin: 20px auto;
     text-align: center;
 }
@@ -126,6 +126,7 @@ header {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
+    width: 325px;
 }
 
 .service h3 {

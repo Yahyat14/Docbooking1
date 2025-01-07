@@ -51,3 +51,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajouter un écouteur d'événement pour générer le reçu lorsque le formulaire est soumis
     paymentForm.addEventListener('submit', generateReceipt);
 });
+    
