@@ -3,94 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocBooking</title>
+    <title>Reçu - Docbooking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="reçus.css">
-    <script src="reçus.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="public/assets/imgDO.png" alt="logo" class="logo">
-                <span>DocBooking</span>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="public/assets/dok.jpg" alt="logo" class="logo-img">
+                    <h1 class="logo">Docbooking</h1>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
-    <section id="services" class="services">
-        <h2>Nos Services Médicaux</h2>
-        <div class="service" data-service="Cardiologie" data-price="800">
-            <h3>Cardiologie</h3>
-            <p>Prix de consultation : 800 MAD</p>
-        </div>
-        <div class="service" data-service="Pédiatrie" data-price="600">
-            <h3>Pédiatrie</h3>
-            <p>Prix de consultation : 600 MAD</p>
-        </div>
-        <div class="service" data-service="Dermatologie" data-price="700">
-            <h3>Dermatologie</h3>
-            <p>Prix de consultation : 700 MAD</p>
-        </div>
-        <div class="service" data-service="Radiologie" data-price="900">
-            <h3>Radiologie</h3>
-            <p>Prix de consultation : 900 MAD</p>
-        </div>
-    </section>
+    <main class="receipt-section">
+        <div class="container">
+            <div class="receipt-card">
+                <div class="receipt-header">
+                    <div class="success-animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Paiement réussi !</h2>
+                    <p>Votre réservation a été confirmée</p>
+                </div>
 
-    <div class="form-container">
-        <h2>Entrez vos informations</h2>
-        <form id="payment-form">
-            <label for="patient-name">Nom et Prenom:</label>
-            <input type="text" id="patient-name" name="patient-name" required>
-            
-            <label for="service">Service:</label>
-            <select id="service" name="service" required>
-                <option value="Cardiologie">Cardiologie</option>
-                <option value="Pédiatrie">Pédiatrie</option>
-                <option value="Dermatologie">Dermatologie</option>
-                <option value="Radiologie">Radiologie</option>
-            </select>
-            
-            <label for="price">Tarif:</label>
-            <input type="text" id="price" name="price" readonly>
-            
-            <label for="date">Date de rendez-vous:</label>
-            <input type="date" id="date" name="date" required>
-            
-            <button type="submit">Générer Reçu</button>
-        </form>
-    </div>
+                <div class="receipt-details">
+                    <div class="receipt-logo">
+                        <img src="public/assets/dok.jpg" alt="Docbooking Logo">
+                        <div class="company-info">
+                            <h3>Docbooking</h3>
+                            <p>Votre plateforme de santé en ligne</p>
+                            <p><i class="fas fa-phone"></i> +212 6 89 54 74 55</p>
+                        </div>
+                    </div>
 
-    <div class="receipt" id="receipt">
-        <h1>Reçu de Paiement</h1>
-        
-        <div class="header">
-            <p>DocBooking</p>
-            <p>Téléphone: +212 6 89 54 74 55</p>
+                    <div class="receipt-info">
+                        <div class="info-group">
+                            <h4>Détails de la consultation</h4>
+                            <div class="info-row">
+                                <span>Référence</span>
+                                <span>#DOC-2024-001</span>
+                            </div>
+                            <div class="info-row">
+                                <span>Date</span>
+                                <span>24 Mars 2024</span>
+                            </div>
+                            <div class="info-row">
+                                <span>Heure</span>
+                                <span>14:30</span>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h4>Médecin</h4>
+                            <div class="doctor-info">
+                                <img src="public/assets/dok.jpg" alt="Doctor" class="doctor-img">
+                                <div>
+                                    <p class="doctor-name">Dr. Harti</p>
+                                    <p class="doctor-speciality">Cardiologue</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h4>Montant payé</h4>
+                            <div class="price-tag">
+                                350 DH
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="receipt-actions">
+                        <button class="btn secondary-btn" onclick="window.location.href='index.html'">
+                            <i class="fas fa-download"></i> Télécharger le reçu
+                        </button>
+                        <button class="btn primary-btn" onclick="window.location.href='index.html'">
+                            <i class="fas fa-calendar-alt"></i> Voir mes rendez-vous
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <h2>Détails du Paiement</h2>
-        <table>
-            <tr>
-                <th>Nom et Prenom</th>
-                <th>Service</th>
-                <th>Tarif</th>
-                <th>Date de rendez-vous</th>
-            </tr>
-            <tr>
-                <td id="display-name"></td>
-                <td id="display-service"></td>
-                <td id="display-price"></td>
-                <td id="display-date"></td>
-            </tr>
-        </table>
-        
-        <p>Merci pour votre confiance!</p>
-    </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Docbooking</h3>
+                    <p>Votre plateforme de rendez-vous médicaux en ligne</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p class="copyright">&copy; 2024 Docbooking. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
