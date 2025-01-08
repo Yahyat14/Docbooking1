@@ -327,21 +327,133 @@ body {
 }
 
 /* Styles pour le calendrier */
-.calendar-container {
-    background: white;
-    border-radius: var(--border-radius);
+.date-picker-wrapper {
+    width: 100%;
     padding: 2rem;
-    margin-bottom: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    margin: 2rem 0;
 }
 
-.date-picker-wrapper {
-    margin-bottom: 2rem;
+.date-picker-wrapper h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date-picker {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Style du calendrier Flatpickr comme Airbnb */
+.calendar-inline {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .flatpickr-calendar {
+    width: 100% !important;
+    max-width: 800px;
+    padding: 1rem;
     box-shadow: none !important;
-    border: 1px solid #e5e7eb;
-    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flatpickr-months {
+    padding: 0.5rem 0;
+    background: transparent;
+}
+
+.flatpickr-month {
+    height: 50px;
+}
+
+.flatpickr-current-month {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.flatpickr-weekday {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.flatpickr-day {
+    border-radius: 50%;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+    border: none;
+}
+
+.flatpickr-day.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.flatpickr-day:hover {
+    background: var(--light-bg);
+}
+
+.flatpickr-day.today {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.flatpickr-day.disabled {
+    color: var(--light-text);
+    opacity: 0.5;
+}
+
+/* Boutons précédent/suivant */
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    top: 8px;
+    padding: 5px;
+}
+
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Style responsive */
+@media (max-width: 768px) {
+    .date-picker-wrapper {
+        padding: 1rem;
+    }
+
+    .flatpickr-calendar {
+        padding: 0.5rem;
+    }
+
+    .flatpickr-day {
+        height: 40px;
+        line-height: 40px;
+        margin: 2px;
+    }
 }
 
 /* Styles pour les créneaux horaires */
@@ -428,3 +540,7 @@ h2 i {
     }
 }
 
+
+.flatpickr-innerContainer{
+    display: block !important;
+}

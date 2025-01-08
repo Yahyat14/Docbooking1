@@ -16,7 +16,7 @@
             <div class="header-content">
                 <div class="logo-container">
                     <img src="public/assets/dok.jpg" alt="logo" class="logo-img">
-                    <h1 class="logo">Docbooking</h1>
+                    <a style="text-decoration: none; " href="./index.html" class="logo">Docbooking</a>
                 </div>
                 <nav class="navbar">
                     <ul>
@@ -57,10 +57,14 @@
                         </div>
                     </div>
 
-                    <div class="calendar-container">
-                        <div class="date-picker-wrapper">
-                            <h2><i class="fas fa-calendar-alt"></i> Sélectionnez une date</h2>
-                            <input type="text" id="datePicker" class="date-picker" placeholder="Choisissez une date">
+                    <div  class="calendar-container" style="text-align: center;">
+                        <h2 style="text-align: center;"><i class="fas fa-calendar-alt"></i> Sélectionnez une date</h2>
+
+                        <div  style="display: flex; justify-content: center;"class="date-picker-wrapper">
+                            <div " class="calendar-container">
+                                <input type="text" id="datePicker" class="date-picker" placeholder="Choisissez une date">
+                                <div  id="calendar-inline" class="calendar-inline"></div>
+                            </div>
                         </div>
                         
                         <div class="time-slots">

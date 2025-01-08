@@ -8,6 +8,10 @@
     --light-bg: #f3f4f6;
     --border-radius: 12px;
     --transition: all 0.3s ease;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --gradient-subtle: linear-gradient(to right, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.1));
 }
 
 * {
@@ -61,16 +65,11 @@ body {
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
-    border-radius: var(--border-radius);
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
     padding: 2rem;
-    transition: var(--transition);
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateY(30px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .info-card:nth-child(1) { animation-delay: 0.2s; }
@@ -78,27 +77,24 @@ body {
 .info-card:nth-child(3) { animation-delay: 0.6s; }
 
 .info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .card-icon {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 2rem;
+    width: 64px;
+    height: 64px;
+    background: var(--gradient-subtle);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.1));
-    border-radius: 50%;
+    margin: 0 auto 1.5rem;
 }
 
 .card-icon i {
-    font-size: 2rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.75rem;
+    color: var(--primary-color);
 }
 
 .info-card h3 {
@@ -118,11 +114,10 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(37, 99, 235, 0.1);
-    border-radius: var(--border-radius);
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    transition: all 0.2s ease;
 }
 
 .doctor-item img {
@@ -151,17 +146,27 @@ body {
     position: relative;
     padding: 1rem 1rem 1rem 3rem;
     margin: 0.5rem 0;
-    background: rgba(243, 244, 246, 0.5);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .service-list li:before {
-    content: '✓';
-    position: absolute;
-    left: 1rem;
-    color: var(--primary-color);
-    font-weight: bold;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-subtle);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .service-list li:hover {
@@ -170,17 +175,18 @@ body {
 }
 
 .schedule-info {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(59, 130, 246, 0.05));
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
     padding: 1.5rem;
-    border-radius: 12px;
 }
 
 .schedule-info p {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 0;
-    border-bottom: 1px dashed rgba(37, 99, 235, 0.2);
 }
 
 .schedule-info p:last-child {
@@ -246,6 +252,10 @@ body {
 }
 
 @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
@@ -325,12 +335,10 @@ body {
 
 /* Header */
 .main-header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
 }
 
 .header-content {
@@ -595,9 +603,9 @@ body {
 
 /* Footer */
 .main-footer {
-    background: linear-gradient(135deg, var(--text-color), #1a1a1a);
-    color: white;
-    padding: 3rem 0;
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--text-color);
 }
 
 .footer-content {
@@ -614,14 +622,11 @@ body {
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+    background: var(--gradient-subtle);
+    border-radius: 8px;
+    color: var(--primary-color);
 }
 
 .footer-social a:hover {
@@ -708,5 +713,118 @@ html {
 .footer-social a:hover {
     background: var(--primary-color);
     transform: translateY(-3px);
+}
+
+/* Ajoutez ces styles pour le toggle et la navbar mobile */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+}
+
+.toggle-bar {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.navbar {
+    transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+    /* Cache la navbar desktop sur mobile */
+    .navbar ul {
+        display: none;
+    }
+
+    /* Affiche le toggle button */
+    .mobile-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* Style de base de la navbar mobile (cachée) */
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background: white;
+        padding: 80px 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+    }
+
+    /* Affiche les liens quand la navbar est active */
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar.active ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mobile-toggle.active .toggle-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .mobile-toggle.active .toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle.active .toggle-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar ul li {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: 0.3s ease-out;
+    }
+
+    .navbar.active ul li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Animation décalée pour chaque élément */
+    .navbar.active ul li:nth-child(1) { transition-delay: 0.1s; }
+    .navbar.active ul li:nth-child(2) { transition-delay: 0.2s; }
+    .navbar.active ul li:nth-child(3) { transition-delay: 0.3s; }
+    .navbar.active ul li:nth-child(4) { transition-delay: 0.4s; }
+
+    /* Overlay sombre quand le menu est ouvert */
+    .navbar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar-overlay.active {
+        display: block;
+        opacity: 1;
+    }
 }
 
