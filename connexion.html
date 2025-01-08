@@ -1,31 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion - Docbooking</title>
     <link href="connexion.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <!-- Formulaire de Connexion -->
+                <form action="#" class="sign-in-form">
+                    <div class="logo-container">
+                        <img src="public/assets/dok.jpg" alt="logo" class="logo-img">
+                        <h2>Docbooking</h2>
+                    </div>
+                    <h3 class="welcome-text">Bon retour parmi nous !</h3>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Mot de passe" required />
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <div class="remember-forgot">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Se souvenir de moi
+                        </label>
+                        <a href="#" class="forgot-pwd">Mot de passe oublié ?</a>
+                    </div>
+                    <button type="submit" class="btn gradient-btn">Se connecter</button>
+                    
+                    <div class="divider">
+                        <span>ou continuer avec</span>
+                    </div>
 
+                    <div class="social-media">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            Google
+                        </button>
+                        <button class="social-btn apple">
+                            <i class="fab fa-apple"></i>
+                            Apple
+                        </button>
+                    </div>
+                </form>
 
-    
-    <div class="login-container">
-        <h1>Connexion</h1>
-        <form action="/login" method="POST">
-            <div class="form-group">
-                <label for="email">Adresse Email</label>
-                <input type="email" id="email" name="email" required placeholder="Entrer votre email">
+                <!-- Formulaire d'Inscription -->
+                <form action="#" class="sign-up-form">
+                    <div class="logo-container">
+                        <img src="public/assets/dok.jpg" alt="logo" class="logo-img">
+                        <h2>Docbooking</h2>
+                    </div>
+                    <h3 class="welcome-text">Créez votre compte</h3>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Nom complet" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Téléphone" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Mot de passe" required />
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <button type="submit" class="btn gradient-btn">S'inscrire</button>
+                    
+                    <div class="divider">
+                        <span>ou s'inscrire avec</span>
+                    </div>
+
+                    <div class="social-media">
+                        <button class="social-btn google">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                            Google
+                        </button>
+                        <button class="social-btn apple">
+                            <i class="fab fa-apple"></i>
+                            Apple
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password">Mot de Passe</label>
-                <input type="password" id="password" name="password" required placeholder="Entrer votre mot de passe">
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Nouveau sur Docbooking ?</h3>
+                    <p>Rejoignez-nous et prenez facilement rendez-vous avec nos spécialistes de santé.</p>
+                    <button class="btn transparent" id="sign-up-btn">S'inscrire</button>
+                </div>
+                <img src="public/assets/dok.jpg" class="image" alt="" />
             </div>
-            <button type="submit">Se Connecter</button>
-        </form>
-        <div class="footer">
-            <p>Pas encore inscrit ? <a href="/interfaceInscrition.html">Créer un compte</a></p>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>Déjà membre ?</h3>
+                    <p>Connectez-vous pour accéder à votre espace personnel et gérer vos rendez-vous.</p>
+                    <button class="btn transparent" id="sign-in-btn">Se connecter</button>
+                </div>
+                <img src="public/assets/dok.jpg" class="image" alt="" />
+            </div>
         </div>
     </div>
+
+    <script>
+        // Toggle Password Visibility
+        document.querySelectorAll('.toggle-password').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+        });
+
+        // Switch between Sign In and Sign Up
+        const sign_in_btn = document.querySelector("#sign-in-btn");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".container");
+
+        sign_up_btn.addEventListener("click", () => {
+            container.classList.add("sign-up-mode");
+        });
+
+        sign_in_btn.addEventListener("click", () => {
+            container.classList.remove("sign-up-mode");
+        });
+    </script>
 </body>
 </html>
